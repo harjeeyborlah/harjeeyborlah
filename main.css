@@ -191,6 +191,7 @@ header{
     right:1em;
     top:1em;
     z-index:1000;
+    
 }
 /*hamburger*/
 .hamburger{
@@ -201,6 +202,7 @@ header{
     display:block;
     position:relative;
     transition: transform 250ms ease-in-out;
+    
 }
 
 .hamburger::before,
