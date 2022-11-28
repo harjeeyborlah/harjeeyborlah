@@ -129,10 +129,114 @@ section {
     padding: 5em 2em;
 }
 
-nav {
-    display: none;
+html{
+    scroll-behavior: smooth;
 }
 
+/*header*/
+header{
+    display:flex;
+    justify-content: space-between;
+    padding:1em;
+}
+
+.nav{
+    position:fixed;
+    background: var(--clr-dark);
+    color:var(--clr-light);
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index:100;
+
+    transform: translateX(100%); /*move the nav bar right 0%*/
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav--list{
+    list-style:none;
+    display:flex;
+    height:100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    margin:0;
+    padding:0;
+}
+
+
+
+.nav-link{
+    color:inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color:var(--clr-accent);
+}
+
+.logo{
+    max-width:200px;
+}
+
+.nav-toggle{
+    padding:.5em;
+    background:transparent; /*to remove the background*/
+    border:0;
+    cursor:pointer;
+    position:absolute;
+    right:1em;
+    top:1em;
+    z-index:1000;
+}
+/*hamburger*/
+.hamburger{
+    background: var(--clr-accent);
+    width:2em;
+    height:3px;
+    border-radius: 1em;
+    display:block;
+    position:relative;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content:'';
+    position:absolute;
+    left:0;
+    right: 0;
+    background: var(--clr-accent);
+    width:2em;
+    border-radius: 1em;
+    height:3px;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before{
+    top:6px;
+}
+
+.hamburger::after{bottom:6px;}
+
+.nav-open .nav{
+    transform:translateX(0); /*when nav is clicked make the navbar fill page*/
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn); /*for the x turning*/
+}
+
+.nav-open .hamburger::after{
+    opacity:0;                      /*for the x turning*/
+}
+
+.nav-open .hamburger::before{
+    transform:rotate(90deg) translateX(-6px); /*for the x turning*/
+}
 /*intro sectiom*/
 
 .intro {
