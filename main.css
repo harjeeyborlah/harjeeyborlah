@@ -155,6 +155,17 @@ body {
         display: flex;
         justify-content: space-between;
     }
+
+    .footer-items-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer{
+        padding-right: 136px;
+        padding-left: 136px;
+        padding-top: 55px;
+    }
 }
 
 .home > .intro-textcontainer > .button > a > .button-1,
@@ -562,4 +573,17 @@ textarea {
 /* footer */
 footer{
     padding-top:10px;
+    background-color: #1a1a29;
+    padding-bottom: 34.5px;
 }
+
+
+.footer-items-top{
+    padding-top:157px;
+    font: size 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    opacity:50%;
+    font-weight: 500;
+}
+
